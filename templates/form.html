@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>         
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+		<style>
+            p {font-size: 13px;}
+            p1 {font-size: 13px;}
+            a {color:navy;
+                font-size: 20px;}
+			body {text-align: center;} 
+			body {background-color: rgb(104, 168, 252);}                       
+		</style>
+        <title>Recommender</title>
+    </head>
+
+    <body>
+        <h1 style = "text-align: center; font-family:Tahoma;"> Movies Based on {{ selected }} </h1>
+            <div>
+                <div class = "container">
+                    <div class="row">
+                    {% for name in names_list %}
+                        <div class="col-3 small-padding right bottom">
+                            <div class="card-deck">                
+                                <div class="card mb-4 w-75 h-100" style="Max-width: 18rem;">
+                                    <div class="card-body">
+                                    <h class="card-title" style = "text-align: center;"> <a href = "{{ movies[name]['link'] }}" target = "popup" style = 'font-family:Tahoma;'>{{ name }}</a></h>
+                                        <div class = 'card-body'>
+                                        <p class = "card-text" style = 'font-family:Tahoma;'>{{movies[name]['genre']}}</p>
+                                        <p class = "card-text"><small class = "text-muted" style = 'font-family:Tahoma;'>Overall: {{movies[name]['year'] }}</small></p>
+                                        <p class = "card-text"><small class = "text-muted" style = 'font-family:Tahoma;'>{{movies[name]['genre']}}</small></p>
+                                        <p class = "card-text"><small style = 'font-family:Tahoma;'>{{movies[name]['actors']}}</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                    {% endfor %}
+                    <form action = "/"><p><button type = "submit" class = "btn btn-primary">Home</button></p></form>
+                    </div>    
+                </div>        
+            </div>              
+    </body>
+</html>

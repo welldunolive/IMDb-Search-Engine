@@ -1,0 +1,23 @@
+  
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+		<style>
+            p {font-size: 30px;}			
+            p1 {font-size: 13px;}
+			body {text-align: center;} 
+			body {background-color: rgb(104, 168, 252);}
+		</style>
+        <title>Home</title>
+    </head>
+
+<body>
+	<p>
+		{% for movie in movies %}
+        <p><a href="/recommendations?movie={{movie}}" style = 'color:navy; font-size: 20px; font-family:Tahoma;'>{{ movie }}</a></p>
+        {% endfor %}
+	</p>
+	<form action = "/"><p><button type = "submit" class = "btn btn-primary">Back</button></p></form>
+</body>
+</html>

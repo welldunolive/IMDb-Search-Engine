@@ -1,4 +1,4 @@
-# IMDb-Search-Engine
+# IMDb Search Engine
 
 This project includes a working app. The data I used can be found here(https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset). This app is still work in progress.
 So far, the app recommends top 12 movies based on genre, description, language, and actors. Due to the size of the data, This only includes about 47,000 movies with English as language or as one of the languages.
